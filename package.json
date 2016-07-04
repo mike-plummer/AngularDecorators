@@ -1,0 +1,42 @@
+{
+  "name": "angular-decorators",
+  "version": "0.0.1",
+  "description": "Comparison of decorating built-in Angular components in 1.x vs 2.x",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --p",
+    "start": "webpack-dev-server",
+    "typings": "typings",
+    "postinstall": "typings install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mike-plummer@github.com/mike-plummer/AngularDecorators.git"
+  },
+  "author": "Mike Plummer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mike-plummer/AngularDecorators/issues"
+  },
+  "homepage": "https://github.com/mike-plummer/AngularDecorators#readme",
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "@angular/platform-browser": "2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "core-js": "^2.4.0",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "ts-loader": "0.8.2",
+    "typescript": "^1.8.10",
+    "typings":"^1.3.1",
+    "webpack": "1.13.1",
+    "raw-loader": "0.5.1",
+    "html-webpack-plugin": "2.22.0",
+    "webpack-dev-server": "1.14.1"
+  }
+}
