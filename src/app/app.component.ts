@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { DateComponent } from "./ng2/date/date.component.ts";
+import { DateTimeComponent } from "./ng2/datetime/datetime.component.ts";
 
 @Component({
     selector: 'angular-decorators',
-    template: '<date></date>',
-    directives: [DateComponent]
+    template: '<datetime></datetime>',
+    directives: [DateTimeComponent]
 })
 export class AppComponent { }

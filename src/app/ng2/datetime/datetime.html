@@ -1,0 +1,10 @@
+<h1>Angular 2</h1>
+
+Custom Pipe Enabled: {{ customPipeEnabled }}
+<button (click)="toggleCustomPipe()">Toggle</button>
+
+<div *ngFor="let datum of ['days', 'months', 'years', 'hours', 'minutes']">
+    <button (click)="subtract(datum)">&lt;</button> {{ datum | capitalize }} <button (click)="add(datum)">&gt;</button>
+</div>
+
+<p>{{ selectedDttm | date:'MMM dd y HH:mm':customPipeEnabled }}</p>
