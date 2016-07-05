@@ -2,7 +2,15 @@ var webpack = require("webpack");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: "./src/app/app.run.ts",
+    entry: {
+        ng1: './src/app/ng/ng.app.ts',
+        ng2: "./src/app/app.run.ts",
+        vendor: ['angular']
+    },
+    output: {
+        path: __dirname + '/js',
+        filename: '[name].bundle.js'
+    },
     devtool: 'source-map',
     module: {
         loaders: [
@@ -37,7 +45,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Angular2 Decorators',
             template: 'src/app/index.html'
-        })
+        }),
+
+        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
     ],
     devServer: {
         port: 8000,

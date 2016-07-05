@@ -8,4 +8,9 @@ import 'zone.js/dist/long-stack-trace-zone';
 import { bootstrap }    from '@angular/platform-browser-dynamic';
 import { AppComponent } from './app.component.ts'
 
+import { UpgradeAdapter } from '@angular/upgrade';
+const upgradeAdapter = new UpgradeAdapter();
+
+upgradeAdapter.bootstrap(document.body, ['ngApp'], { strictDi: true });
+
 bootstrap(AppComponent);
